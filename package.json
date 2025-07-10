@@ -1,0 +1,46 @@
+{
+  "name": "uamp-js",
+  "version": "1.0.0",
+  "description": "UAMP 1.0 SDK for Node.js and the browser (ESM/CJS)",
+  "keywords": [
+    "uamp",
+    "agent",
+    "protocol",
+    "sdk",
+    "ai"
+  ],
+  "homepage": "https://github.com/uamp-project/uamp-js",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "jose": "^5",
+    "undici": "^6",
+    "ws": "^8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.13",
+    "typescript": "^5",
+    "vitest": "^1"
+  }
+}
